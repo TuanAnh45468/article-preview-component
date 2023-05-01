@@ -7,3 +7,27 @@
         @apply text-base font-manrope
     }
 }
+
+@layer components {
+    .speech-bubble {
+        position: relative;
+        border-radius: .4em;
+        width:200px;
+        color:white;
+    }
+
+    .speech-bubble:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border: 20px solid transparent;
+        border-top-color: hsl(217, 19%, 35%);
+        border-bottom: 0;
+        margin-left: -20px;
+        margin-bottom: -20px;
+    }
+
+}

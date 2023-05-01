@@ -18,27 +18,28 @@
       rel="stylesheet"
     />
     <link href="output.css" rel="stylesheet" />
+<!--    <link href="build.css" rel="stylesheet" />-->
 
     <title>Frontend Mentor | Article preview component</title>
   </head>
   <body
     class="flex flex-col min-h-screen justify-center items-center bg-light-grayish-blue"
   >
-    <main class="mobile:w-[335px] grid mobile:gap-y-6 shadow-2xl rounded-lg">
-      <img alt="" class="w-full rounded-t-lg" src="images/drawers.jpg" />
-      <div class="px-5 py-5 flex flex-col gap-y-5">
-        <p class="font-bold">
+    <main class="mobile:w-[335px] laptop:w-[900px] grid laptop:grid-cols-2 mobile:gap-y-6 shadow-2xl rounded-lg">
+      <img alt="" class="w-full rounded-t-lg laptop:rounded-l-lg laptop:rounded-t-none" src="images/drawers.jpg" />
+      <div class="px-5 laptop:px-8 py-5 flex flex-col gap-y-5">
+        <p class="font-bold laptop:text-xl">
           Shift the overall look and feel by adding these wonderful touches to
           furniture in your home
         </p>
 
-        <p class="text-desaturated-dark-blue">
+        <p class="text-desaturated-dark-blue laptop:text-lg">
           Ever been in a room and felt like something was missing? Perhaps it
           felt slightly bare and uninviting. I’ve got some simple tips to help
           you make any room feel complete.
         </p>
 
-        <div class="flex items-center" id="avatar">
+        <div class="flex items-center relative" id="avatar">
           <img
             alt=""
             class="inline-block w-[54px] h-[54px] rounded-full"
@@ -49,7 +50,17 @@
             <span class="text-sm text-desaturated-dark-blue">28 Jun 2020</span>
           </div>
 
-            <img alt="" class="w-[15px] h-[13px] ml-auto" id="icon-share" src="images/icon-share.svg" />
+          <div class="rounded-full w-[30px] h-[30px] flex items-center justify-center ml-auto" id="icon-share">
+            <svg class="fill-dark-grayish-blue" height="15" width="15" xmlns="http://www.w3.org/2000/svg"><path d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/></svg>
+          </div>
+
+          <div class="speech-bubble bg-dark-grayish-blue h-[50px] absolute top-[-62px] right-[-22%] flex items-center justify-around hidden">
+            <span class="text-desaturated-dark-blue tracking-widest">SHARE</span>
+            <img alt="" class="w-[20px] h-[20px]" src="images/icon-facebook.svg">
+            <img alt="" class="w-[20px] h-[20px]" src="images/icon-twitter.svg">
+            <img alt="" class="w-[20px] h-[20px]" src="images/icon-pinterest.svg">
+          </div>
+
         </div>
       </div>
 

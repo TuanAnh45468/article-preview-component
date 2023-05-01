@@ -528,6 +528,59 @@ body {
   --tw-backdrop-sepia:  ;
 }
 
+.speech-bubble {
+  position: relative;
+  border-radius: .4em;
+  width:200px;
+  color:white;
+}
+
+.speech-bubble:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 20px solid transparent;
+  border-top-color: hsl(217, 19%, 35%);
+  border-bottom: 0;
+  margin-left: -20px;
+  margin-bottom: -20px;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.top-0 {
+  top: 0px;
+}
+
+.right-1\/2 {
+  right: 50%;
+}
+
+.right-\[-7\%\] {
+  right: -7%;
+}
+
+.top-\[-62px\] {
+  top: -62px;
+}
+
+.right-\[-24\%\] {
+  right: -24%;
+}
+
+.right-\[-22\%\] {
+  right: -22%;
+}
+
 .ml-5 {
   margin-left: 1.25rem;
 }
@@ -560,16 +613,16 @@ body {
   height: 20px;
 }
 
-.h-\[34px\] {
-  height: 34px;
+.h-\[30px\] {
+  height: 30px;
+}
+
+.h-\[50px\] {
+  height: 50px;
 }
 
 .h-\[54px\] {
   height: 54px;
-}
-
-.h-\[30px\] {
-  height: 30px;
 }
 
 .min-h-screen {
@@ -584,8 +637,8 @@ body {
   width: 20px;
 }
 
-.w-\[34px\] {
-  width: 34px;
+.w-\[30px\] {
+  width: 30px;
 }
 
 .w-\[54px\] {
@@ -594,10 +647,6 @@ body {
 
 .w-full {
   width: 100%;
-}
-
-.w-\[30px\] {
-  width: 30px;
 }
 
 .flex-col {
@@ -610,6 +659,10 @@ body {
 
 .justify-center {
   justify-content: center;
+}
+
+.justify-around {
+  justify-content: space-around;
 }
 
 .gap-x-5 {
@@ -629,14 +682,14 @@ body {
   border-radius: 0.5rem;
 }
 
-.rounded-t-lg {
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
-}
-
 .rounded-b-lg {
   border-bottom-right-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
+}
+
+.rounded-t-lg {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
 }
 
 .bg-dark-grayish-blue {
@@ -658,6 +711,10 @@ body {
   fill: hsl(210, 46%, 95%);
 }
 
+.fill-dark-grayish-blue {
+  fill: hsl(217, 19%, 35%);
+}
+
 .px-5 {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
@@ -666,11 +723,6 @@ body {
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
-}
-
-.px-0 {
-  padding-left: 0px;
-  padding-right: 0px;
 }
 
 .text-sm {
@@ -717,5 +769,40 @@ body {
 
   .mobile\:gap-y-6 {
     row-gap: 1.5rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .laptop\:w-\[900px\] {
+    width: 900px;
+  }
+
+  .laptop\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .laptop\:rounded-l-lg {
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+  }
+
+  .laptop\:rounded-t-none {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+  }
+
+  .laptop\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .laptop\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .laptop\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
